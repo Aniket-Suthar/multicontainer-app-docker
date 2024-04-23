@@ -8,19 +8,21 @@ services:
 
   backend:
     image: aniket2409/21bcp229-aniket-backend
+    restart: always
     ports:
-      - "5000:5001"
+      - "5001:5001"
     depends_on:
       - mongodb
     environment:
-      - MONGO_URI=mongodb+srv://<mongo_username>:<mongo_password>@cluster1.b9vwxsl.mongodb.net/test
+      - MONGO_URI=mongodb+srv://<username>:<>@cluster1.b9vwxsl.mongodb.net/test
 
   mongodb:
     image: mongo
+    restart: always
     container_name: mongodb
     ports:
       - "27017:27017"
     environment:
       - MONGO_INITDB_DATABASE=test
-      - MONGO_INITDB_ROOT_USERNAME=<mongo_username>
-      - MONGO_INITDB_ROOT_PASSWORD=<mongo_password>
+      - MONGO_INITDB_ROOT_USERNAME=
+      - MONGO_INITDB_ROOT_PASSWORD=

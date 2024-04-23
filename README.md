@@ -265,9 +265,15 @@ docker compose up
 ![containers](image-1.png)
 
 
-That's it! You now have both the backend and frontend of the application running as Docker containers on your local machine. You can access the application by navigating to `http://localhost:8080` in your web browser.
+That's it! You now have both the backend and frontend of the application running as Docker containers on your local machine. You can access the application by navigating to `http://localhost:8080` in your web browser. Also don't forgot update the mongo_uri,mongo_username,mongo_password in the docker-compose file.
 
-## Blog Post URL
+### Blog Post URL
 - https://aniket-suthar.github.io/
+
+### Project repository URL to clone
+- https://github.com/Aniket-Suthar/coding-platform
+
+### Blog Post repository URL
+- https://github.com/Aniket-Suthar/Aniket-Suthar.github.io
 
 #### Feel free to adjust the placeholders and commands as needed for your specific backend and frontend Docker images! Happy containerizing!
