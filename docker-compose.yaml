@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  frontend:
+    image: aniket2409/21bcp229-aniket-frontend
+    ports:
+      - "8080:8080"
+
+  backend:
+    image: aniket2409/21bcp229-aniket-backend
+    ports:
+      - "5000:5001"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=mongodb+srv://aniket:aniket@cluster1.b9vwxsl.mongodb.net/test
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=aniket
+      - MONGO_INITDB_ROOT_PASSWORD=aniket
